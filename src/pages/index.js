@@ -16,10 +16,11 @@ export default class Index extends Component {
     putRequest(req) {
         this.setState({
             history: [
-                ...this.state.history, {
+                {
                     date: formatDate(new Date()),
                     req: req,
-                }
+                },
+                ...this.state.history,
             ]
         });
     }
@@ -27,10 +28,11 @@ export default class Index extends Component {
     putResponse(resp) {
         this.setState({
             history: [
-                ...this.state.history, {
+                {
                     date: formatDate(new Date()),
                     resp: resp
-                }
+                },
+                ...this.state.history,
             ]
         });
     }

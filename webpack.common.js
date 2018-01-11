@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/entry.js',
+        debugger: './src/entry.js',
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -72,8 +72,8 @@ module.exports = {
 
         ]
     },
-  resolve: {
-      extensions: ['.js', '.json', '.scss', '.less', 'jsonp'],
-  },
+    resolve: {
+        extensions: ['.js', '.json', '.scss', '.less', 'jsonp'],
+    },
 
 };

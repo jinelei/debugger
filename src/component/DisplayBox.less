@@ -1,42 +1,90 @@
-.display-container-base{
-  min-height: 40px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border-radius: 3px;
-  margin: 2px;
-
-  .display-box-request {
+@media (min-width: 1080px){
+  .display-container-base {
+    min-height: 40px;
+    width: 100%;
     display: flex;
-    justify-content:left;
     align-items: center;
-    div:first-child {
-      margin-left: 20px;
-      min-width: 250px;
+    border-radius: 3px;
+    margin: 2px;
+
+    .display-box-request {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      div:first-child {
+        margin-left: 5px;
+        min-width: 250px;
+      }
+      div:last-child {
+        margin-left: 100px;
+      }
     }
-    div:last-child {
-      margin-left: 100px;
+
+    .display-box-response {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      div:first-child {
+        margin-left: 5px;
+        min-width: 250px;
+      }
+      div:last-child {
+        margin-left: 100px;
+      }
     }
   }
 
-  .display-box-response {
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    div:first-child {
-      margin-left: 20px;
-      min-width: 250px;
-    }
-    div:last-child {
-      margin-left: 100px;
-    }
+  .display-container-request {
+    background: rgba(47, 79, 79, 0.37);
+  }
+
+  .display-container-response {
+    background: rgba(55, 79, 28, 0.42);
   }
 }
+@media (max-width: 1080px){
+  .display-container-base {
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    margin: 2px;
 
-.display-container-request{
-  background: rgba(47, 79, 79, 0.37);
-}
+    .display-box-request {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex-flow: column nowrap;
+      div:first-child {
+        margin-left: 5px;
+        min-width: 250px;
+      }
+      div:last-child {
+        margin-left: 5px;
+      }
+    }
 
-.display-container-response{
-  background: rgba(55, 79, 28, 0.42);
+    .display-box-response {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex-flow: column nowrap;
+      div:first-child {
+        margin-left: 5px;
+        min-width: 250px;
+      }
+      div:last-child {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .display-container-request {
+    background: rgba(47, 79, 79, 0.37);
+  }
+
+  .display-container-response {
+    background: rgba(55, 79, 28, 0.42);
+  }
 }
