@@ -76,19 +76,19 @@ export default class Index extends Component {
     render() {
         return (
             <div>
-                <Websocket url='ws://jinelei.cn:1201/jin'
+                <Websocket url='ws://localhost:8080/websocket'
                            ref={Websocket => {
                                this.refWebSocket = Websocket;
                            }}
                            debug={true}
-                           reconnect={true}
+                           reconnect={false}
                            onError={this.handleConnectionError.bind(this)}
                            onClose={this.handleConnectionClose.bind(this)}
                            onOpen={this.handleConnectionOpen.bind(this)}
                            onMessage={this.handleReceiveMessage.bind(this)}/>
                 <InputBox handleSubmit={(message) => this.handleSendMessage(message)}/>
-                {this.state.history.map((value => {
-                    return <DisplayBox date={value.date} req={value.req} resp={value.resp}/>
+                {this.state.history.map(((value,index) => {
+                    return <DisplayBox key={index} date={value.date} req={value.req} resp={value.resp}/>
                 }))}
             </div>
         )
